@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  .w3-card-4
+    ul
+      each app in appMap
+        li
+          b= app.name
+          ul
+            each rule in app.rules.length ? app.rules : ['No rule applies to this app']
+              li
+                div(class='rule')=rule
+    br
