@@ -35,9 +35,9 @@ This way your application can be accessed only by a list of authorized users
 
 ## Running the Sample
 - Get the code
-  ```bash
-  git clone https://github.com/zeroth/auth0-app-explorer.git
-  ```
+```bash
+git clone https://github.com/zeroth/auth0-app-explorer.git
+```
 
 - Install the dependencies.
 
@@ -80,12 +80,12 @@ If the user is authorized, the user gets redirected to `/app` and presented with
 On the `/app` page following conditions are handled to show the application with the rules applied to them.
 
 - Check if the rule applies to the specific application. to do so, check the `rule.script` to see if the rules is applied to a specific application by comparing either `context.clientName` or `context.clientID`, i.e check if  `if (context.clientName === 'App Name')` or `if (context.clientID === 'BJF129131928asqadasa')` exists in the rule script. If yes then the rule applies to the application.
-- Check if rule is blacklisted for a specific application. to do so, check for the opposite of the above rule i.e. look negative condition  `if (context.clientName !== 'App Name')` or `if (context.clientID !== 'BJF129131928asqadasa')`. If one of them is true means this rules applies to all the other applications but this.
+- Check if the rule is in the blacklist for a specific application. this is achieved as follow, check for the opposite of the above rule i.e. look negative condition `if (context.clientName !== 'App Name')` or `if (context.clientID !== 'BJF129131928asqadasa')`. If one of them is true means, this rules applies to all the other applications but this.
 - If non of the above conditions exists in the `rule.script` it means this rule applies to all the applications.
   
 The code for the same exists in `applist.js`
 
-# Pseudo code 
+## Pseudo code 
 ```
 Get `rules` from `/api/v2/rules`
 Get `clients` from `/api/v2/clients`
