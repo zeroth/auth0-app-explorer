@@ -17,6 +17,26 @@ const managementApiTokenRequest = {
 
 
 /* GET app list. */
+/*
+Get `rules` from `/api/v2/rules`
+Get `clients` from `/api/v2/clients`
+for each client in clients:
+  for each rule in rules:
+    if rule.script has if(context.clientName === {client_name}) :
+      if client.name === client_name :
+        client.rules.push(rule)
+    else if rule.script has if(context.clientID === {client_id}) :
+      if client.clientID === client_id :
+          client.rules.push(rule)
+    else if rule.script has if(context.clientID !== {client_id}) :
+        if client.clientID !== client_id :
+          client.rules.push(rule)
+    else if rule.script has if(context.clientName !== {client_name}) :
+        if client.clientName !== client_name :
+          client.rules.push(rule)
+    else: # there is no condition in the rule.script means this rules applies to all
+      client.rules.push(rule)
+ */
 router.get('/app', secured(), async (req, res, next) => {
     try {
 
