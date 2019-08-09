@@ -94,6 +94,16 @@ app.use(function (req, res, next) {
   next(err);
 });
 
+// in production on Heroku - re-route everything to https
+if (process.env.NODE_ENV==="production") {
+  app.use((req, res, next) => {
+    if (req.header('x-forwarded-proto') !== 'https') {
+      res.redirect(req.protocol + req.hostname + req.url);
+    } else {
+      next()
+    }
+  })
+}
 // Error handlers
 
 // Development error handler
