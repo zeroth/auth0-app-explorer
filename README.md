@@ -85,7 +85,7 @@ On the `/app` page following conditions are handled to show the application with
   
 The code for the same exists in `applist.js`
 
-# pseudo code 
+# Pseudo code 
 ```
 Get `rules` from `/api/v2/rules`
 Get `clients` from `/api/v2/clients`

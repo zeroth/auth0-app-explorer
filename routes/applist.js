@@ -16,13 +16,7 @@ const managementApiTokenRequest = {
 }
 
 
-const getManagementData = async (uri, accessToken) => {
-    return
-}
-
-//   token = await 
-
-/* GET user profile. */
+/* GET app list. */
 router.get('/app', secured(), async (req, res, next) => {
     try {
 
