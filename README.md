@@ -1,7 +1,7 @@
 # App Explorer
 This is the sample application that will list down the Auth0 Registered `Applications`  and `Rules` applied to each of the applications.
 
-![App screenshot](/docs/appexplore.png?raw=true)
+![App screenshot](/docs/appexplore.png)
 
 ## Auth0 Configuration
 - Sign in to your Auth0 account. If you don't yet have an Auth0 account, sign up for free.
