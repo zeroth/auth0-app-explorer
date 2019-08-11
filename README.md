@@ -54,7 +54,7 @@ yarn
 
 - Rename `.env.example` to `.env` and replace the values for `AUTH0_CLIENT_ID`, `AUTH0_DOMAIN`, `AUTH0_CLIENT_SECRET`, `AUTH0_MANAGEMENT_CLIENT_SECRET` and `AUTH0_MANAGEMENT_CLIENT_ID` with your Auth0 credentials. 
 
-- `AUTH0_MANAGEMENT_CLIENT_SECRET` and `AUTH0_MANAGEMENT_CLIENT_ID` can found in Auth0 `Dashboard > APIs > Auth0 Management API > Setting`
+- `AUTH0_MANAGEMENT_CLIENT_SECRET` and `AUTH0_MANAGEMENT_CLIENT_ID` can found in Auth0 `Dashboard > Application > "API Explorer Application." > Settings`
 
 
 - Run the app
